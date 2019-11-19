@@ -21,9 +21,8 @@
 - Clean simple design
 - Light and Mobile-Friendly
 - Multi-language support
-- Customisable
-- Designed to not interfere with other layouts
 - Zero initial configuration
+- Customisable
 - Handy shortcodes
 
 ## Requirements
@@ -142,6 +141,9 @@ disableKinds = ['taxonomy', 'taxonomyTerm']
   # (Optional, default none) Set leaf bundle to render as side menu
   # When not specified file structure and weights will be used
   BookMenuBundle = '/menu'
+
+  # (Optional, default true) Enables JS script to reset menu position when switching pages.
+  BookMenuRestorePosition = true
   
   # (Optional, default docs) Specify section of content to render as menu
   # You can also set value to "*" to render all sections to menu
@@ -163,6 +165,7 @@ disableKinds = ['taxonomy', 'taxonomyTerm']
   
   # (Optional, default true) Enables search function with flexsearch,
   # Index is built on fly, therefore it might slowdown your website.
+  # Configuration for indexing can be adjusted in i18n folder per language.
   BookSearch = true
 ```
 

@@ -1,4 +1,4 @@
-# hugo server --minify --themesDir ... --baseURL=http://0.0.0.0:1313/theme/hugo-book/
+# hugo server --minify --themesDir ... --baseURL=http://0.0.0.0:1313/
 
 baseURL = 'https://example.com/'
 title = 'Hugo Book'
@@ -43,6 +43,9 @@ defaultContentLanguage = 'en'
   # When not specified file structure and weights will be used
   # BookMenuBundle = '/menu'
 
+  # (Optional, default true) Enables JS script to reset menu position when switching pages.
+  BookMenuRestorePosition = true
+
   # (Optional, default docs) Specify section of content to render as menu
   # You can also set value to '*' to render all sections to menu
   BookSection = 'docs'
@@ -63,5 +66,5 @@ defaultContentLanguage = 'en'
 
   # (Optional, default true) Enables search function with flexsearch,
   # Index is built on fly, therefore it might slowdown your website.
+  # Configuration for indexing can be adjusted in i18n folder per language.
   BookSearch = true
-

@@ -12,13 +12,15 @@
 {{ partial "docs/inject/menu-after" . }}
 </nav>
 
+{{ if default true .Site.Params.BookMenuRestorePosition }}
 <!-- Restore menu position as soon as possible to avoid flickering -->
 <script>
 (function() {
-  var menu = document.querySelector("aside.book-menu nav");
+  const menu = document.querySelector("aside.book-menu nav");
   addEventListener("beforeunload", function(event) {
     localStorage.setItem("menu.scrollTop", menu.scrollTop);
   });
   menu.scrollTop = localStorage.getItem("menu.scrollTop");
 })();
 </script>
+{{ end }}
